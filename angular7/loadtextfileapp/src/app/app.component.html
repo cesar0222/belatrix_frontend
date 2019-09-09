@@ -1,0 +1,53 @@
+<input type="file" (change)="onChange($event.target.files)">
+
+<div>
+       <h3>DEPARTAMENTO</h3>
+       <table style="border: 1px solid black">
+          <tr>
+                  <th>Código</th>
+                  <th>Nombre</th>
+                  <th>Código Padre</th>
+                  <th>Descripción Padre</th>        
+          </tr>
+          <tr *ngFor="let obj of departArray; let i = index">   
+                <td>{{ obj.id}}</td>
+                <td>{{ obj.name}}</td>
+                <td>{{ obj.parentCode}}</td>
+                <td>{{ obj.parentDescription}}</td>
+          </tr>
+      </table>
+
+      <br>
+      <h3>PROVINCIA</h3>
+      <table style="border: 1px solid black">
+          <tr>
+                  <th>Código</th>
+                  <th>Nombre</th>
+                  <th>Código Padre</th>
+                  <th>Descripción Padre</th>        
+          </tr>
+          <tr *ngFor="let obj of provtArray; let i = index">   
+                <td>{{ obj.id}}</td>
+                <td>{{ obj.name}}</td>
+                <td>{{ obj.parentCode}}</td>
+                <td>{{ obj.parentDescription}}</td>
+          </tr>
+      </table>
+
+      <br>
+      <h3>DISTRITO</h3>
+      <table style="border: 1px solid black">
+          <tr>
+                  <th>Código</th>
+                  <th>Nombre</th>
+                  <th>Código Padre</th>
+                  <th>Descripción Padre</th>        
+          </tr>
+          <tr *ngFor="let obj of disttArray; let i = index">   
+                <td>{{ obj.id}}</td>
+                <td>{{ obj.name}}</td>
+                <td>{{ obj.parentCode}}</td>
+                <td>{{ obj.parentDescription}}</td>
+          </tr>
+      </table>
+</div>

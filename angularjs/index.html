@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div ng-app="myApp" ng-controller="myController">
+        <h1>Seleccionar archivo</h1>
+        <input type="file" on-read-file="showContent($fileContent)"/>
+        
+        <h3>DEPARTAMENTO</h3>
+        <table ng-controller="myController" style="border: 1px solid black">
+                <thead>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                        <th>Codigo Padre</th>
+                        <th>Descripción Padre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="obj in departs">
+                        <td>{{obj.id}}</td>
+                        <td>{{obj.name}}</td>
+                        <td>{{obj.parentCode}}</td>
+                        <td>{{obj.parentDescription}}</td>
+                    </tr>
+                </tbody>
+        </table>
+
+        <h3>PROVINCIA</h3>
+        <table ng-controller="myController" style="border: 1px solid black">
+                <thead>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                        <th>Codigo Padre</th>
+                        <th>Descripción Padre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="obj in provin">
+                        <td>{{obj.id}}</td>
+                        <td>{{obj.name}}</td>
+                        <td>{{obj.parentCode}}</td>
+                        <td>{{obj.parentDescription}}</td>
+                    </tr>
+                </tbody>
+        </table>
+
+        <h3>DISTRITO</h3>
+        <table ng-controller="myController" style="border: 1px solid black">
+                <thead>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                        <th>Codigo Padre</th>
+                        <th>Descripción Padre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="obj in dists">
+                        <td>{{obj.id}}</td>
+                        <td>{{obj.name}}</td>
+                        <td>{{obj.parentCode}}</td>
+                        <td>{{obj.parentDescription}}</td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="./controllers/main.js"></script>
+</body>
+</html>
